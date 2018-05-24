@@ -57,8 +57,10 @@ void parse_int_status(u8* status)
 
 void print_status(u8* status)
 {
+    Serial.print("interrupt status value are::");
     for(u32 i=0;i<8;i++)
     {
+        
         Serial.print(status[i],HEX);
         Serial.print("  ");
 
@@ -91,6 +93,7 @@ void loop()
     /*Read temp*/
     sensor.read_pixel_temperature(pixels_temp);
     /*Print 8X8 pixels value.*/
+    Serial.println("Temperature for 8X8 matrix are::");
     for(int i=0;i<PIXEL_NUM;i++)
     {
         Serial.print(pixels_temp[i]);
@@ -103,7 +106,7 @@ void loop()
 
     /*Get interrupt status for every channel and print out.
     **NODE!!:Interrupt Table is renewed in timing with when output data is renewed.This indicate that when you read the interrupt status
-    **register for every channel Periodically.The results of sensor register are not the moment you are reading,But the sum of the 
+    **register for every channel Periodically.The results of interrupt status register are not the moment you were reading,But the sum of the 
     interruptions generated during the entire cycle.
     **/
     if(sensor.get_interrupt_status())
