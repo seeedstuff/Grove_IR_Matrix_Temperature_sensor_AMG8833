@@ -221,6 +221,7 @@ s32 AMG8833::init()
     set_hysteresis(cfg_data_hysteresis);
     /*Enable interrupt function.*/
     set_interrupt_mode(INT_ACTIVE|INT_ABS_VALUE_INT_MODE);
+    //set_interrupt_mode(INT_ACTIVE);
     delay(10);
     /*Clear all status register*/
     clear_status(CLEAR_ALL_STATUS);
