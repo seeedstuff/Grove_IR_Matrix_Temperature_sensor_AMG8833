@@ -12,11 +12,11 @@ Usage
 Download all the source files.  
 There are two examples for user.  
 >* **exambles/basic_demo.ino**,From this example,you can get the 64 channels(8X8) IR sensor raw data from serial-watch-window.  
->* **exambles/TFT_screen_demo.ino**,From this example,we use a TFT screen to show the 8X8 matrix data,Different data map different   colors.So we can make a simple、low resolution thermal imaging display system.Through this visual interface, you can see the results   very intuitively
+>* **exambles/TFT_screen_demo.ino**,From this example,we use a [TFT screen](https://www.seeedstudio.com/2.8-TFT-Touch-Shield-V2.0-p-1286.html) to show the 8X8 matrix data,Different data map different   colors.So we can make a simple、low resolution thermal imaging display system.Through this visual interface, you can see the results   very intuitively
 
 In addition:  
 ---------------------
-There is a INT pad on Seeed's AMG8833 module,This pad correspond to INT pin,when sensor generate a interruption(usually the temperature beyond limit),The pin turns to high,Otherwise stays low.Without this INT pin,you need to polling for sensor result value.  
+There is a INT pad on Seeed's AMG8833 module,This pad correspond to INT pin,when sensor generate a interruption(usually the temperature beyond limit),The pin turns to low,Otherwise stays high.Without this INT pin,you need to polling for sensor result value.  
 
 
 Reference:
